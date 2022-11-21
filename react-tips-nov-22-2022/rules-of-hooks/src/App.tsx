@@ -12,27 +12,48 @@ function resetCursorIndex() {
   cursorIndex = 0;
 }
 
+// Breaks Rule #2
+// const [counterThree, setCounterThree] = useState(0);
+
 function App() {
   const [counterOne, setCounterOne] = useState(0);
   const [counterTwo, setCounterTwo] = useState(0);
+  const logCounters = false;
 
-  useEffect(() => {
-    console.log({ counterOne, counterTwo });
-  }, []);
+  // Breaks Rule #1
+  if (logCounters) {
+    useEffect(() => {
+      console.log({ counterOne, counterTwo });
+    }, [counterOne]);
+  }
 
   return (
     <main>
       <Header children="Use Hooks Clone" />
       <Counter
-        name="Counter One"
+        name="Counter 1"
         clickHandler={() => setCounterOne(counterOne + 1)}
         count={counterOne}
       />
       <Counter
-        name="Counter Two"
+        name="Counter 2"
         clickHandler={() => setCounterTwo(counterTwo + 1)}
         count={counterTwo}
       />
+      {/* <Counter
+        name="Counter 3"
+        clickHandler={() => setCounterThree(counterThree + 1)}
+        count={counterThree}
+      /> */}
+      <button
+        onClick={() => {
+          setCounterOne(0);
+          setCounterTwo(0);
+          // setCounterThree(0);
+        }}
+      >
+        Reset
+      </button>
     </main>
   );
 }
