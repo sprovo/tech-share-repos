@@ -1,0 +1,17 @@
+{
+  "name": "essentials-implementation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host=localhost --port=3000 --open",
+    "build": "vite build",
+    "preview": "vite preview --host=localhost --port=3000 --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^3.0.0"
+  }
+}

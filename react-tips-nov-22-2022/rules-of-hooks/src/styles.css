@@ -1,0 +1,40 @@
+html {
+  background-color: #1f1f1f;
+}
+
+main {
+  margin-inline: auto;
+  width: 400px;
+  height: 100vw;
+  background-color: #1f1f1f;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+section > p {
+  color: rgb(88, 88, 88);
+}
+
+h1,
+p,
+span {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+main > div {
+  height: 20px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 24px;
+}
+
+div > p {
+  min-width: 24px;
+  text-align: center;
+}
