@@ -23,7 +23,7 @@ function App() {
   // Breaks Rule #1
   if (logCounters) {
     useEffect(() => {
-      console.log({ counterOne, counterTwo });
+      console.log({ counterOne });
     }, [counterOne]);
   }
 
